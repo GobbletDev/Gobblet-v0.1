@@ -1,0 +1,24 @@
+body {
+  font-family: arial;
+}
+.board .box{
+  width: 80pt;
+  height: 80pt;
+  background: #aaa;
+  background-size: cover;
+  display: inline-block;
+  margin: 5pt;
+  text-align: center;
+  box-shadow: 0 0 6pt 0 black;
+  transition-duration: 150ms;
+  margin-right: 50pt;
+}
+.board .box.RED{
+  background: #f00;
+}
+.row {
+  display: flex;
+}
+.box {
+  cursor: pointer;
+}
