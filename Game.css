@@ -2,8 +2,8 @@ body {
   font-family: arial;
 }
 .board .box{
-  width: 80pt;
-  height: 80pt;
+  width: 100pt;
+  height: 100pt;
   background: #aaa;
   background-size: cover;
   display: inline-block;
@@ -21,4 +21,26 @@ body {
 }
 .box {
   cursor: pointer;
+}
+.gobblerBig{
+  border-radius: 50%;
+  width:80pt;
+  height:80pt;
+  background: ##fb0202;
+  background-size: cover;
+
+}
+.gobblerMed{
+  border-radius: 50%;
+  width:60pt;
+  height:60pt;
+  background: ##fb0202;
+  background-size: cover;
+}
+.gobblerSml{
+  border-radius: 50%;
+  width:40pt;
+  height:40pt;
+  background: ##fb0202;
+  background-size: cover;
 }
