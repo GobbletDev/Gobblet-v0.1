@@ -12,6 +12,8 @@ $(window).load(function() {
       $row.append($box);
     }
     $(".board").append($row);
+    var $gobblerBig = $("<div>").addClass("gobblerBig");
+    $(".board").append($gobblerBig);
 
 }
 });
