@@ -1,10 +1,10 @@
-class square {
-  constructor() {
-    this.BigGob = 0;
-    this.MedGob = 0;
-    this.SmlGob = 0;
-    this.Value = 0;
-  }
+
+    function square() {
+        this.BigGob = 0;
+        this.MedGob = 0;
+        this.SmlGob = 0;
+        this.Value = 0;
+      }
   get isEmpty(){
      if (BigGob==0 && MedGob==0 && SmlGob==0){
        return true;

@@ -30,7 +30,8 @@ for (var i = 0; i < config.height; i++) {
 }
 for (var i = 0; i < config.height; i++) {
   for (var j = 0; j < config.width; j++) {
-    GameBoard[i][j]=0;
+    var s = new square();
+    GameBoard[i][j]=square;
   }
 }
 console.log(GameBoard);
@@ -41,5 +42,6 @@ $(".box").click(function (){
    console.log($(".box").index(this));
    console.log(x+','+y);
  });
+
 
 });
