@@ -25,7 +25,7 @@ class square {
       case 1: if (isEmpty()==true) {
         SmlGob = 1;
         Value=1;
-        return "Small Blue Gobbler"
+        return "Small Blue Gobbler";
       }
         else
         return "Small Blue Can't Move";
@@ -68,7 +68,7 @@ class square {
       return "Big Red Goblber";
     }
       else
-        return "Big Red Can't Move"
+        return "Big Red Can't Move";
       break;
   }//End switch
 }//enf if positive
