@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 body {
   font-family: arial;
 }
 .board{
-  position: absolute;;
-  bottom: 200pt;
+  position: relative;
+  bottom: -60pt;
 }
 .board .box{
   width: 100pt;
@@ -16,10 +16,7 @@ body {
   text-align: center;
   box-shadow: 0 0 6pt 0 black;
   transition-duration: 150ms;
-  margin-right: 50pt;
-}
-.board .box.RED{
-  background: #f00;
+
 }
 .row {
   display: flex;
@@ -49,51 +46,25 @@ body {
   background: #fb0202;
   background-size: cover;
 }
-=======
-body {
-  font-family: arial;
-}
-.board .box{
-  width: 100pt;
-  height: 100pt;
-  background: #aaa;
-  background-size: cover;
-  display: inline-block;
-  margin: 5pt;
-  text-align: center;
-  box-shadow: 0 0 6pt 0 black;
-  transition-duration: 150ms;
-  margin-right: 50pt;
-}
-.board .box.RED{
-  background: #f00;
-}
-.row {
-  display: flex;
-}
-.box {
-  cursor: pointer;
-}
-.gobblerBig{
+.gobblerBig2{
   border-radius: 50%;
   width:80pt;
   height:80pt;
-  background: ##fb0202;
+  background: #2802fb;
   background-size: cover;
 
 }
-.gobblerMed{
+.gobblerMed2{
   border-radius: 50%;
   width:60pt;
   height:60pt;
-  background: ##fb0202;
+  background: #2802fb;
   background-size: cover;
 }
-.gobblerSml{
+.gobblerSml2{
   border-radius: 50%;
   width:40pt;
   height:40pt;
-  background: ##fb0202;
+  background: #2802fb;
   background-size: cover;
 }
->>>>>>> origin/master
