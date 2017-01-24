@@ -31,7 +31,7 @@ for (var i = 0; i < config.height; i++) {
 for (var i = 0; i < config.height; i++) {
   for (var j = 0; j < config.width; j++) {
     var s = new square();
-    GameBoard[i][j]=square;
+    GameBoard[i][j]=s;
   }
 }
 console.log(GameBoard);

@@ -5,24 +5,24 @@
         this.SmlGob = 0;
         this.Value = 0;
       }
-  get isEmpty(){
+  square.prototype.getIsEmpty=function(){
      if (BigGob==0 && MedGob==0 && SmlGob==0){
        return true;
      }
      else {
        return false
      }
-   }
+   };
    /* 1-Small Blue. 2-Medium Blue 3-Big Blue.
       4-Small Red. 5-Medium Red 6-Big Red
       SmlGob = 1- blue 2- red
       MedGob = 1- blue 2- red
       BigGob = 1- blue 2- red
       Value = 1- blue 10- red */
-  set Move(x){
+  square.prototype.setMove=function(x){
     if (x>0){
     switch (x) {
-      case 1: if (isEmpty()==true) {
+      case 1: if (getIsEmpty()==true) {
         SmlGob = 1;
         Value=1;
         return "Small Blue Gobbler";
@@ -30,7 +30,7 @@
         else
         return "Small Blue Can't Move";
         break;
-      case 4:  if (isEmpty()==true) {
+      case 4:  if (getIsEmpty()==true) {
           SmlGob = 2;
           Value = 10;
           return "Small Red Gobbler";
@@ -38,7 +38,7 @@
           else
           return "Small Red Can't Move";
           break;
-      case 2: if ((isEmpty() == true) || (MedGob ==0 && BigGob == 0)){
+      case 2: if ((getIsEmpty() == true) || (MedGob ==0 && BigGob == 0)){
         MedGob = 1;
         Value=1;
         return "Medium Blue Goblber";
@@ -46,7 +46,7 @@
         else {
           return "Medium Blue Can't Move";
         } break;
-    case 5: if ((isEmpty() == true) || (MedGob ==0 && BigGob == 0)){
+    case 5: if ((getIsEmpty() == true) || (MedGob ==0 && BigGob == 0)){
       MedGob = 2;
       Value=10;
       return "Medium Red Goblber";
@@ -54,7 +54,7 @@
       else
         return "Medium Red Can't Move";
        break;
-    case 3: if ((isEmpty() == true) || (MedGob ==0)){
+    case 3: if ((getIsEmpty() == true) || (MedGob ==0)){
       BigGob = 1 ;
       Value=1;
       return "Big blue Goblber";
@@ -62,7 +62,7 @@
       else
         return "Big blue Can't Move";
       break;
-    case 6: if ((isEmpty() == true) || (MedGob ==0)){
+    case 6: if ((getIsEmpty() == true) || (MedGob ==0)){
       BigGob = 2 ;
       Value=10;
       return "Big Red Goblber";
@@ -81,7 +81,7 @@
         Value=0;
         break;
       case -2: MedGob=0;
-        if (!isEmpty()){
+        if (!getIsEmpty()){
         return  Move(SmlGob);
         }
         else {
@@ -89,7 +89,7 @@
           return "Empty now";
         } break;
       case -5: MedGob=0;
-        if (!isEmpty()){
+        if (!getIsEmpty()){
         return  Move(SmlGob);
         }
         else {
@@ -114,12 +114,12 @@
       break;
     }//End negative switch
   }//end of else
-    }//End set move
-get Value (){
+};//End set move
+square.prototype.getValue=function (){
   return this.Value;
-}
-get CurrentGob(){
-  if (isEmpty()==true)
+};
+square.prototype.getCurrentGob=function(){
+  if (getIsEmpty()==true)
     return 0;
   switch (BigGob) {
     case 1: return 3; break;
@@ -133,6 +133,4 @@ get CurrentGob(){
     case 1: return 1; break;
     case 2: return 3; break;
   }
-}//End of CurrentGob
-
-}//Enf of square
+};//End of CurrentGob
