@@ -4,8 +4,8 @@
         this.MedGob = 0;
         this.SmlGob = 0;
         this.Value = 0;
-      }
-  square.prototype.getIsEmpty=function(){
+
+  this.getIsEmpty=function(){
      if (this.BigGob==0 && this.MedGob==0 && this.SmlGob==0){
        return true;
      }
@@ -19,10 +19,10 @@
       MedGob = 1- blue 2- red
       this.BigGob = 1- blue 2- red
       Value = 1- blue 10- red */
-  square.prototype.setMove=function(x){
+  this.setMove=function(x){
     if (x>0){
     switch (x) {
-      case 1: if (square.getIsEmpty()==true) {
+      case 1: if (getIsEmpty()==true) {
         this.SmlGob = 1;
         Value=1;
         return "Small Blue Gobbler";
@@ -62,7 +62,7 @@
       else
         return "Big blue Can't Move";
       break;
-    case 6: if ((square.getIsEmpty() == true) || (this.MedGob ==0)){
+    case 6: if ((this.getIsEmpty() == true) || (this.MedGob ==0)){
       this.BigGob = 2 ;
       Value=10;
       return "Big Red Goblber";
@@ -115,10 +115,10 @@
     }//End negative switch
   }//end of else
 };//End set move
-square.prototype.getValue=function (){
+this.getValue=function (){
   return this.Value;
 };
-square.prototype.getCurrentGob=function(){
+this.getCurrentGob=function(){
   if (square.getIsEmpty()==true)
     return 0;
   switch (this.BigGob) {
@@ -134,3 +134,4 @@ square.prototype.getCurrentGob=function(){
     case 2: return 3; break;
   }
 };//End of CurrentGob
+}

@@ -53,6 +53,7 @@ $(".box").click(function (){
   place = $(".box").index(this);
    x=Math.floor(place/config.width);
    y = place % config.width;
+   console.log(gobblerSend);
    console.log(GameBoard[x][y].setMove(gobblerSend));
    console.log($(".box").index(this));
    console.log(x+','+y);
